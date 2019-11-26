@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>hethongso</title>
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/font/css/all.css">
+        <link rel="stylesheet" href="../bootstrap/css/style.css">
+        <script src="../bootstrap/js/jquery-3.4.1.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <script src="socket.io/socket.io.js"></script>
+        <script src="../bootstrap/js/render.js"></script>
+    </head>
+    <body>
+        <!--nav bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top nav">
+            <div class="container">
+                <h1><a class="navbar-brand" href="#">Hethongso</a></h1>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarText"
+                    aria-controls="navbarText"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#data">Data
+                                <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#chart-sensor-control">Control</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--end nav bar-->
+        <!--logo-dash-->
+        <div id="logo-dash">
+            <div class="container">
+                <i class="fas fa-home"></i>
+                <h3>Dashboard</h3>
+            </div>
+        </div>
+        <!--end logo dash-->
+        <!--Data-->
+        <div id="data">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="jumbotron sensor-data-tem">
+                            <h3>Temperature</h3>
+                            <img src="img-sensor/temp.svg" alt="temperature" width="100" height="100">
+                            <p class="current">Temp now: <span id="temperatuter">20*C</span></p>
+                            <p class="status">Status: <span id="stt-temp">Cao</span></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="jumbotron sensor-data-hum">
+                            <h3>Humidity</h3>
+                            <img src="img-sensor/hum.svg" alt="humidity" width="100" height="100">
+                            <p class="current">Hum now: <span id="humidity">80%</span></p>
+                            <p class="status">Status: <span id="stt-hum">Cao</span></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="jumbotron sensor-data-gas">
+                            <h3>Gas</h3>
+                            <img src="img-sensor/gas.png" alt="humidity" width="100" height="100">
+                            <p class="current">Gas now: <span id="gas">80%</span></p>
+                            <p class="status">Status: <span id="stt-gas">Cao</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end data-->
+        <!--chart-->
+        <div id="chart-sensor-control">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="jumbotron chart-sensor">
+                            <h3>Chart</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="jumbotron control-led">
+                            <h3>Control</h3>
+                            <img src="img/light-bulb.png" alt="light-on" width="150" height="150">
+                            <input type="submit" id="on" value="ON">
+                            <input type="submit" id="off" value="OFF">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="255" value="0" class="slider" id="myRange">
+                                <p class="pt-4 val">Value: <span id="demo"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end chart-->
+        <!--About-->
+        <div id="about">
+            <div class="container">
+                <h3>About</h3>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="jumbotron about-esp">
+                            <h4>Esp32-Wroom32</h4>
+                            <i class="fas fa-book-reader"></i>
+                            <ul>
+                                <li>CPU</li>
+                                <li>Hỗ trợ 2 giao tiếp không dây</li>
+                                <li>Hỗ trợ tất cả các loại giao tiếp(I2C, UART, I2S...)</li>
+                                <li>Cảm biến tích hợp trên chip esp32</li>
+                                <li>Bảo mật</li>
+                                <li><a href="http://arduino.vn/tutorial/1570-gioi-thieu-module-esp32-va-huong-dan-cai-trinh-bien-dich-tren-arduino-ide">Details...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="jumbotron about-sensor">
+                            <h4>Sensors</h4>
+                            <i class="fas fa-arrow-alt-circle-down"></i>
+                            <ul>
+                                <li>Dht-11 <a href="https://iotmaker.vn/cam-bien-nhiet-do-do-am-dht11.html">Details...</a></li>
+                                <li>Sensor-MQ2 <a href="https://iotmaker.vn/cam-bien-khi-ga-mq2.html">Details...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="jumbotron about-iot">
+                            <h4>Internet of Things</h4>
+                            <i class="fas fa-globe-americas"></i>
+                            <ul>
+                                <li>Internet of Things là gì?</li>
+                                <li>Lịch sử của IoT</li>
+                                <li>Internet của vạn vật lớn đến mức nào?</li>
+                                <li>Lợi ích của Internet of Things cho doanh nghiệp</li>
+                                <li>Lợi ích của Internet of Things cho người tiêu dùng là gì?</li>
+                                <li><a href="https://www.vietsunshine.com.vn/2018/12/13/iot-la-gi-moi-thu-ban-can-biet-ve-internet-of-things/">Details...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end about-->
+        <!--footer-->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="location">
+                            <h4>Location</h4>
+                            <p>Group2-HeThongSo-PTIT</p>
+                            <div id="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4430.
+                                        118339931995!2d105.78398220662243!3d20.981786091409774!2m3!1f0!2f0!3f0!3
+                                        m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135accdcf7b0bd1%3A0xc1cf5dd00247628a!
+                                        2sPosts%20%26%20Telecommunications%20Institute%20of%20Technology!5e0!3m2!
+                                        1sen!2s!4v1574145963557!5m2!1sen!2s"
+                                        width="300" height="220" frameborder="0" style="border:0;" allowfullscreen="">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="around-web">
+                            <h4>Around The Web</h4>
+                            <div class="icon-footer">
+                                <a href="https://www.facebook.com/haviet0610"><i class="fab fa-facebook fb"></i></a> 
+                                <a href="https://www.instagram.com/haviet.0110/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/user/MartinGarrix"><i class="fab fa-youtube"></i></a>
+                            </div>
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li>Phone: 0399881175</li>
+                                <li>Email: Viethanguyen510@gmail.com</li>
+                                <li><a href="http://portal.ptit.edu.vn/">Work: Posts and Telecommunications Institute of Technology </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="develop">
+                            <h4>Develop</h4>
+                            <ul>
+                                <li><a href="https://www.w3schools.com/">HTML/CSS</a></li>
+                                <li><a href="https://www.w3schools.com/">Bootstrap</a></li>
+                                <li><a href="https://www.w3schools.com/">NodeJs</a></li>
+                                <li><a href="https://socket.io/docs/">Socket.io</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end footer-->
+        <!--footer made by-->
+        <div id="made-by">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <p>Created at 2019 - No Copyright <i class="far fa-copyright"></i></p>
+                </div>
+            </div>
+        </div>
+        <!--end footer made by-->
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+        </script>
+    </body>
+</html>

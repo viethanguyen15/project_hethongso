@@ -1,0 +1,696 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F5F5DC;
+}
+ul li{
+    list-style: none;
+}
+.nav .navbar-brand{
+    font-size: 30px;
+}
+.nav #navbarText ul li a{
+    font-size: 21px;
+}
+#data{
+    margin-top: 40px;
+}
+#data .sensor-data-tem{
+    background-color: #2f4f4f;
+    height: 200px;
+    border-radius: 15px;
+}
+#data .sensor-data-hum{
+    background-color: #2e8b57;
+    height: 200px;
+    border-radius: 15px;
+}
+#data .sensor-data-gas{
+    background-color: #008080;
+    height: 200px;
+    border-radius: 15px;
+}
+#data .sensor-data-tem h3{
+    margin-top: -50px;
+    text-align: center;
+    color: #ffffff;
+}
+#data .sensor-data-hum h3{
+    margin-top: -50px;
+    text-align: center;
+    color: #ffffff;
+}
+#data .sensor-data-gas h3{
+    margin-top: -50px;
+    text-align: center;
+    color: #ffffff;
+}
+#data .current{
+    color: #ffffff;
+    font-size: 18px;
+    position: absolute;
+    top: 65px;
+    margin-left: 130px;
+}
+#data .status{
+    color: #ffffff;
+    font-size: 18px;
+    position: absolute;
+    top: 100px;
+    margin-left: 130px;
+}
+#logo-dash{
+    margin-top: 10px;
+}
+#logo-dash .fas{
+    color: #00008B;
+    font-size: 32px;
+}
+#logo-dash h3{
+    position: absolute;
+    top: 87px;
+    margin-left: 50px;
+    font-weight: 600;
+}
+#chart-sensor-control{
+    background-color: #F5F5DC;
+    width: 100%;
+    margin-top: 20px;
+}
+#chart-sensor-control .chart-sensor{
+    background-color: red;
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+}
+#chart-sensor-control .chart-sensor h3{
+    font-size: 35px;
+    color: #006400;
+    font-weight: 600;
+    position: absolute;
+    top: 10px;
+    margin-left: 240px;
+}
+
+#chart-sensor-control .control-led h3{
+    font-size: 35px;
+    color: #006400;
+    font-weight: 600;
+    position: absolute;
+    top: 10px;
+    margin-left: 135px;
+}
+#chart-sensor-control .control-led{
+    background-color: #C0C0C0;
+    width: 100%;
+    height: 350px;
+    border: 1px solid #2F4F4F;
+    border-radius: 15px;
+}
+#chart-sensor-control .control-led img{
+    position: absolute;
+    top: 70px;
+}
+#chart-sensor-control .control-led #on{
+    background-color: none;
+    color: #000000;
+    font-size: 23px;
+    width: 70px;
+    height: 55px;
+    position: absolute;
+    top: 120px;
+    margin-left: 160px;
+    border-radius: 10px;
+}
+#chart-sensor-control .control-led #on:hover{
+    background-color: #708090;
+    color: #ffffff;
+}
+#chart-sensor-control .control-led #on:focus{
+    background-color: red;
+    color: #ffffff;
+}
+#chart-sensor-control .control-led #off{
+    background-color: none;
+    color: #000000;
+    font-size: 23px;
+    width: 70px;
+    height: 55px;
+    position: absolute;
+    top: 120px;
+    margin-left: 250px;
+    border-radius: 10px;
+}
+#chart-sensor-control .control-led #off:hover{
+    background-color: #708090;
+    color: #ffffff;
+}
+#chart-sensor-control .control-led #off:focus{
+    background-color: red;
+    color: #ffffff;
+}
+
+.slidecontainer {
+    width: 100%;
+    position: absolute;
+    margin-top: 210px;
+}
+#chart-sensor-control .control-led .slidecontainer #demo{
+    color: red;
+} 
+.slider {
+    /*-webkit-appearance: none;*/
+    width: 80%;
+    height: 20px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    /*outline: none;*/
+    opacity: 0.7;
+    /*-webkit-transition: .2s;
+    /*transition: opacity .2s;*/
+    position: absolute;
+}
+  
+.slider:hover {
+    opacity: 1;
+  }
+  
+/* .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  } */
+  
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+#about{
+    margin-top: 15px;
+    background-color: #008080;
+    width: 100%;
+    height: 400px;
+}
+#about h3{
+    font-size: 37px;
+    color: #ffffff;
+    margin-left: 490px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+#about .about-esp{
+    background-color:#708090;
+    width: 100%;
+    height: 270px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 5px;
+}
+#about .about-esp h4{
+    margin-left: 80px;
+}
+#about .about-esp i{
+    font-size: 30px;
+    margin-left: 150px;
+}
+#about .about-esp ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#about .about-sensor{
+    background-color:#708090;
+    width: 100%;
+    height: 270px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 5px;
+}
+#about .about-sensor h4{
+    margin-left: 120px;
+}
+#about .about-sensor i{
+    font-size: 30px;
+    margin-left: 150px;
+}
+#about .about-sensor ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#about .about-iot{
+    background-color:#708090;
+    width: 100%;
+    height: 270px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 5px;
+}
+#about .about-iot h4{
+    margin-left: 80px;
+}
+#about .about-iot i{
+    font-size: 30px;
+    margin-left: 150px;
+}
+#about .about-iot ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+/*footer*/
+#footer{
+    background-color: #2f4f4f;
+    width: 100%;
+    height: 400px;
+}
+#footer .around-web i{
+    color: #ffffff;
+    font-size: 33px;
+    margin-left: 18px;
+}
+#footer h4{
+    margin-top: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+#footer .around-web .fa-facebook:hover{
+    color: rgb(25, 136, 248);
+}   
+#footer .around-web .fa-instagram:hover{
+    color: #C71585;
+}
+#footer .around-web .fa-youtube:hover{
+    color: red;
+}
+#footer .location h4{
+    margin-left: 125px;
+}
+#footer .location p{
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 50px;
+}
+#footer .around-web h4{
+    margin-left: 80px;
+}
+#footer .around-web .icon-footer{
+    margin-left: 83px;
+}
+#footer .around-web .icon-footer i{
+    margin-left: 20px;
+}
+#footer .around-web ul{
+    color: #ffffff;
+    margin-left: 60px;
+}
+#footer .around-web ul li a{
+    color: #ffffff;
+    text-decoration: none;
+}
+#footer .develop h4{
+    margin-left: 130px;
+}
+#footer .develop ul li a{
+    color: #ffffff;
+    font-size: 19px;
+    margin-left: 130px;
+    text-decoration: none;
+}
+/*end footer*/
+/*made by*/
+#made-by{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(17, 16, 16);
+}
+#made-by p{
+    color: #ffffff;
+    margin-left: 510px;
+    padding-top: 10px;
+}
+#made-by p i{
+    color: #ffffff;
+}
+/*end made by*/
+/*----@media-responsive----*/
+/*data*/
+@media (max-width: 320px){
+    #data h3{
+        font-size: 22px;
+        position: absolute;
+        top: 55px;
+        margin-left: 100px;
+    }
+    #data .current{
+        font-size: 16px;
+        margin-left: 110px;
+    }
+    #data .status{
+        font-size: 16px;
+        margin-left: 110px;
+    }
+}
+@media (min-width: 320px) and (max-width: 768px){
+    #data h3{
+        position: absolute;
+        top: 52px;
+        margin-left: 100px;
+    }
+} 
+@media (min-width:768px) and (max-width:992px){
+    #data .current{
+        font-size: 15px;
+        margin-left: 100px;
+    }
+    #data .status{
+        font-size: 15px;
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+    #data img{
+        margin-left: -20px;
+    }
+}
+/*end data*/
+/*sensor-control*/
+@media (min-width: 992px){
+    #chart-sensor-control .control-led h3{
+        font-size: 32px;
+        margin-left: 90px;
+    }
+    #chart-sensor-control .control-led img{
+        margin-left: -25px;
+    }
+    #chart-sensor-control .control-led #on{
+        margin-left: 105px;
+    }
+    #chart-sensor-control .control-led #off{
+        margin-left: 180px;
+    }
+    #chart-sensor-control .control-led .slidecontainer .slider{
+        margin-left: -10px;
+    }
+}
+@media (min-width:768px) and (max-width:992px){
+    #chart-sensor-control .chart-sensor h3{
+        margin-left: 120px;
+        font-size: 30px;
+    }
+    #chart-sensor-control .control-led h3{
+        font-size: 25px;
+        margin-left: 35px;
+    }
+    #chart-sensor-control .control-led img{
+        width: 90px;
+        height: 90px;
+        margin-left: -30px;
+    }
+    #chart-sensor-control .control-led #on{
+        width: 50px;
+        height: 40px;
+        margin-left: 50px;
+    }
+    #chart-sensor-control .control-led #off{
+        width: 50px;
+        height: 40px;
+        margin-left: 110px;
+    }
+    #chart-sensor-control .control-led .slidecontainer{
+        width: 85%;
+        position: absolute;
+        top: 10px;
+    }
+    #chart-sensor-control .control-led .slidecontainer .val{
+        padding-top: 10px;
+    }
+    #chart-sensor-control .control-led .slidecontainer .slider{
+        margin-left: -10px;
+    }
+}
+@media (max-width: 320px){
+    #chart-sensor-control .chart-sensor{
+        display: none;
+    }
+    #chart-sensor-control .control-led h3{
+        font-size: 28px;
+        margin-left: 70px;
+    }
+    #chart-sensor-control .control-led img{
+       width: 100px;
+       height: 100px;
+       margin-left: -10px; 
+    }
+    #chart-sensor-control .control-led #on{
+        width: 55px;
+        height: 45px;
+        margin-left: 80px;
+    }
+    #chart-sensor-control .control-led #off{
+        width: 55px;
+        height: 45px;
+        margin-left: 150px;
+    }
+}
+
+/*end sensor-control*/
+/*about*/
+@media (min-width:992px){
+    #about{
+        height: 400px;
+    }
+    #about .about-iot{
+        height: 270px;
+    }
+}
+@media(min-width:768px) and (max-width:992px){
+    #about{
+        height: 400px;
+    }
+    #about h3{
+        margin-left: 290px;
+    }
+    #about .about-esp{
+        height: 300px;
+    }
+    #about .about-esp h4{
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    #about .about-esp i{
+        margin-left: 80px;
+    }
+    #about .about-esp ul li{
+        font-size: 15px;
+    }
+    #about .about-sensor{
+        height: 300px;
+    }
+    #about .about-sensor h4{
+        font-size: 20px;
+        margin-left: 55px;
+    }
+    #about .about-sensor i{
+        margin-left: 80px;
+    }
+    #about .about-sensor ul li{
+        font-size: 15px;
+    }
+    #about .about-iot{
+        height: 300px;
+    }
+    #about .about-iot h4{
+        font-size: 20px;
+        margin-left: 55px;
+    }
+    #about .about-iot i{
+        margin-left: 80px;
+    }
+    #about .about-iot ul li{
+        font-size: 15px;
+    }
+}
+@media(min-width:576px) and (max-width:768px){
+    #about{
+        height: 970px;
+    }
+    #about h3{
+        margin-left: 190px;
+    }
+}
+@media (min-width:320px) and (max-width:576px){
+    #chart-sensor-control .chart-sensor{
+       display: none; 
+    }
+    #chart-sensor-control .control-led #on{
+        width: 55px;
+        height: 45px;
+        margin-left: 125px;
+    }
+    #chart-sensor-control .control-led #off{
+        width: 55px;
+        height: 45px;
+        margin-left: 185px;
+    }
+}
+@media (min-width:320px) and (max-width:576px){
+    #about{
+        height: 1000px;
+    }
+    #about h3{
+        margin-left: 100px;
+    }
+    #about .about-esp h4{
+        margin-left: 60px;
+    }
+    #about .about-esp i{
+        margin-left: 120px;
+    }
+    #about .about-sensor h4{
+        margin-left: 100px;
+    }
+    #about .about-sensor i{
+        margin-left: 120px;
+    }
+    #about .about-iot h4{
+        margin-left: 60px;
+    }
+    #about .about-iot i{
+        margin-left: 120px;
+    }
+}
+@media (max-width:320px){
+    #about{
+        height: 1100px;
+    }
+    #about h3{
+        margin-left: 90px;
+    }
+    #about .about-esp {
+        height: 300px;
+    }
+    #about .about-esp h4{
+        margin-left: 40px;
+    }
+    #about .about-esp i{
+        margin-left: 110px;
+    }
+    #about .about-sensor {
+        height: 300px;
+    }
+    #about .about-sensor h4{
+        margin-left: 90px;
+    }
+    #about .about-sensor i{
+        margin-left: 120px;
+    }
+    #about .about-iot {
+        height: 330px;
+    }
+    #about .about-iot h4{
+        margin-left: 90px;
+    }
+    #about .about-iot i{
+        margin-left: 120px;
+    }
+}
+/*end about*/
+/*footer and made-by*/
+@media(min-width: 992px){
+    #footer .location #map{
+        margin-left: 15px;
+    }
+}
+@media(min-width:768px) and (max-width:992px){
+    #footer{
+       height: 800px;
+    }
+    #footer .location{
+        margin-left: 150px;
+    }
+    #footer .around-web{
+        margin-left: 100px;
+    }
+    #footer .develop{
+        margin-left: 100px;
+    }
+    #made-by p{
+        margin-left: 350px;
+    }
+}
+@media(min-width: 576px) and (max-width: 768px){
+    #footer{
+        height: 800px;
+    }
+    #footer .location{
+        margin-left: 30px;
+    }
+    #made-by p{
+        margin-left: 230px;
+    }
+}
+@media(min-width: 480px) and (max-width: 576px){
+    #footer{
+        height: 800px;
+    }
+    #footer .location{
+        margin-left: 50px;
+    }
+    #made-by p{
+        margin-left: 100px;
+    }
+}
+@media(min-width: 320px) and (max-width:480px){
+    #footer{
+        height: 830px;
+    }
+    #made-by p{
+        margin-left: 60px;
+    }    
+}
+@media(max-width: 320px){
+    #footer{
+        height: 630px;
+    }
+    #footer h4{
+        font-size: 20px;
+    }
+    #footer .location h4{
+        margin-left: 100px;
+        font-size: 20px;
+    }
+    #footer .location p{
+        font-size: 17px;
+    }
+    #footer .location #map{
+        display: none;
+    }
+    #footer .around-web h4{
+        margin-left: 55px;
+    } 
+    #footer .around-web .icon-footer{
+        margin-left: 35px;
+    }
+    #footer .around-web ul{
+        margin-left: 20px;
+    }
+    #footer .develop h4{
+        margin-left: 70px;
+    }
+    #footer .develop ul{
+        margin-left: -70px;
+    }
+    #made-by p{
+        margin-left: 10px;
+    }  
+}
+/*end footer and made-by*/
