@@ -80,23 +80,50 @@ ul li{
     margin-top: 20px;
 }
 #chart-sensor-control .chart-sensor{
-    background-color: red;
+    background-color: #C0C0C0;
     width: 100%;
     height: 350px;
     border-radius: 15px;
+    border: 1px solid #2F4F4F;
 }
 #chart-sensor-control .chart-sensor h3{
     font-size: 35px;
-    color: #006400;
+    color: #ffffff;
     font-weight: 600;
     position: absolute;
     top: 10px;
-    margin-left: 240px;
+    margin-left: 285px;
 }
-
+#chart-sensor-control .chart-sensor .line-chart-sensor{
+    position: absolute;
+    top: 275px;
+}
+#chart-sensor-control .chart-sensor .line-chart-sensor .line-chart-sensor-style{
+    width: 110px;
+    height: 60px;
+    margin-left: 80px;
+}
+#chart-sensor-control .chart-sensor .line-chart-sensor .t-line{
+    position: absolute;
+    top: 50px;
+    left: 87px;
+    color: red;
+}
+#chart-sensor-control .chart-sensor .line-chart-sensor .h-line{
+    position: absolute;
+    top: 50px;
+    left: 295px;
+    color: #008B8B;
+}
+#chart-sensor-control .chart-sensor .line-chart-sensor .g-line{
+    position: absolute;
+    top: 50px;
+    left: 500px;
+    color: #2f4f4f;
+}
 #chart-sensor-control .control-led h3{
     font-size: 35px;
-    color: #006400;
+    color: #ffffff;
     font-weight: 600;
     position: absolute;
     top: 10px;
@@ -200,6 +227,7 @@ ul li{
     width: 100%;
     height: 400px;
 }
+/*about*/
 #about h3{
     font-size: 37px;
     color: #ffffff;
@@ -311,7 +339,7 @@ ul li{
 }
 #footer .around-web ul{
     color: #ffffff;
-    margin-left: 60px;
+    margin-left: 81px;
 }
 #footer .around-web ul li a{
     color: #ffffff;
@@ -380,35 +408,155 @@ ul li{
     #data img{
         margin-left: -20px;
     }
+    #data .sensor-data-tem p{
+        margin-left: 90px;
+    }
+    #data .sensor-data-hum p{
+        margin-left: 95px;
+    }
+    #data .sensor-data-hum .status{
+        margin-left: 95px;
+    }
+    #data .sensor-data-gas p{
+        margin-left: 98px;
+    }
+    #data .sensor-data-gas .status{
+        margin-left: 95px;
+    }
+}
+@media (min-width:992px) and (max-width:1024px){
+    #data .sensor-data-tem p{
+        margin-left: 110px;
+    }
+    #data .sensor-data-hum p{
+        margin-left: 113px;
+    }
+    #data .sensor-data-gas p{
+        margin-left: 113px;
+    }
+}
+@media (min-width:1024px) and (max-width:1200px){
+    #data .sensor-data-tem p{
+        margin-left: 110px;
+    }
+    #data .sensor-data-hum p{
+        margin-left: 113px;
+    }
+    #data .sensor-data-gas p{
+        margin-left: 113px;
+    }
 }
 /*end data*/
 /*sensor-control*/
-@media (min-width: 992px){
+@media(min-width:1200px){
     #chart-sensor-control .control-led h3{
         font-size: 32px;
-        margin-left: 90px;
+        margin-left: 85px;
     }
     #chart-sensor-control .control-led img{
-        margin-left: -25px;
+        margin-left: -20px;
     }
     #chart-sensor-control .control-led #on{
-        margin-left: 105px;
+        margin-left: 115px;
     }
     #chart-sensor-control .control-led #off{
-        margin-left: 180px;
+        margin-left: 205px;
+    }
+    #chart-sensor-control .slidecontainer{
+        margin-left: -10px;
+    } 
+}
+@media (min-width: 1024px) and (max-width:1200px){
+    #chart-sensor-control .control-led h3{
+        font-size: 32px;
+        margin-left: 60px;
+    }
+    #chart-sensor-control .control-led img{
+        margin-left: -27px;
+    }
+    #chart-sensor-control .control-led #on{
+        margin-left: 95px;
+    }
+    #chart-sensor-control .control-led #off{
+        margin-left: 175px;
     }
     #chart-sensor-control .control-led .slidecontainer .slider{
         margin-left: -10px;
     }
+    #chart-sensor-control .chart-sensor h3{
+        margin-left: 230px;
+    }
+    #chart-sensor-control .slidecontainer{
+        margin-left: -10px;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .line-chart-sensor-style{
+        margin-left: 50px;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .t-line{
+        position: absolute;
+        top: 50px;
+        left: 60px;
+        color: red;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .h-line{
+        position: absolute;
+        top: 50px;
+        left: 240px;
+        color: #008B8B;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .g-line{
+        position: absolute;
+        top: 50px;
+        left: 420px;
+        color: #2f4f4f;
+    }    
+}
+@media(min-width:992px) and (max-width: 1024px){
+    #chart-sensor-control .control-led h3{
+        font-size: 32px;
+        margin-left: 60px;
+    }
+    #chart-sensor-control .control-led img{
+        margin-left: -30px;
+    }
+    #chart-sensor-control .control-led #on{
+        margin-left: 90px;
+    }
+    #chart-sensor-control .control-led #off{
+        margin-left: 170px;
+    }
+    #chart-sensor-control .chart-sensor h3{
+        margin-left: 230px;
+    }
+    #chart-sensor-control .slidecontainer{
+        margin-left: -15px;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .line-chart-sensor-style{
+        margin-left: 50px;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .t-line{
+        position: absolute;
+        top: 50px;
+        left: 60px;
+        color: red;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .h-line{
+        position: absolute;
+        top: 50px;
+        left: 240px;
+        color: #008B8B;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .g-line{
+        position: absolute;
+        top: 50px;
+        left: 420px;
+        color: #2f4f4f;
+    }    
 }
 @media (min-width:768px) and (max-width:992px){
-    #chart-sensor-control .chart-sensor h3{
-        margin-left: 120px;
-        font-size: 30px;
-    }
     #chart-sensor-control .control-led h3{
         font-size: 25px;
-        margin-left: 35px;
+        margin-left: 25px;
     }
     #chart-sensor-control .control-led img{
         width: 90px;
@@ -436,6 +584,56 @@ ul li{
     #chart-sensor-control .control-led .slidecontainer .slider{
         margin-left: -10px;
     }
+    #chart-sensor-control .chart-sensor h3{
+        margin-left: 150px;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .line-chart-sensor-style{
+        margin-left: 10px;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .t-line{
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        color: red;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .h-line{
+        position: absolute;
+        top: 50px;
+        left: 160px;
+        color: #008B8B;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .g-line{
+        position: absolute;
+        top: 50px;
+        left: 300px;
+        color: #2f4f4f;
+    }    
+}
+@media (min-width:576px) and (max-width:768px){
+    #chart-sensor-control .chart-sensor h3{
+        margin-left: 165px;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .line-chart-sensor-style{
+        margin-left: 25px;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .t-line{
+        position: absolute;
+        top: 50px;
+        left: 35px;
+        color: red;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .h-line{
+        position: absolute;
+        top: 50px;
+        left: 185px;
+        color: #008B8B;
+    }
+    #chart-sensor-control .chart-sensor .line-chart-sensor .g-line{
+        position: absolute;
+        top: 50px;
+        left: 340px;
+        color: #2f4f4f;
+    }    
 }
 @media (max-width: 320px){
     #chart-sensor-control .chart-sensor{
@@ -464,12 +662,56 @@ ul li{
 
 /*end sensor-control*/
 /*about*/
-@media (min-width:992px){
+@media (min-width:1024px) and (max-width:1200px){
+    #about h3{
+        margin-left: 410px;
+    }
+    #about .about-esp h4{
+        margin-left: 50px;
+    }
+    #about .about-esp i{
+        margin-left: 120px;
+    }
+    #about .about-sensor h4{
+        margin-left: 94px;
+    }
+    #about .about-sensor i{
+        margin-left: 120px;
+    }
+    #about .about-iot h4{
+        margin-left: 45px;
+    }
+    #about .about-iot i{
+        margin-left: 122px;
+    }
+}
+@media (min-width:992px) and (max-width:1024px){
     #about{
         height: 400px;
     }
     #about .about-iot{
         height: 270px;
+    }
+    #about h3{
+        margin-left: 400px;
+    }
+    #about .about-esp h4{
+        margin-left: 50px;
+    }
+    #about .about-esp i{
+        margin-left: 120px;
+    }
+    #about .about-sensor h4{
+        margin-left: 94px;
+    }
+    #about .about-sensor i{
+        margin-left: 120px;
+    }
+    #about .about-iot h4{
+        margin-left: 45px;
+    }
+    #about .about-iot i{
+        margin-left: 122px;
     }
 }
 @media(min-width:768px) and (max-width:992px){

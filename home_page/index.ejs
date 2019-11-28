@@ -17,7 +17,7 @@
         <!--nav bar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top nav">
             <div class="container">
-                <h1><a class="navbar-brand" href="#">Hethongso</a></h1>
+                <h1><a class="navbar-brand" href="#">He<span id="style-h1">thongso</span></a></h1>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -31,11 +31,11 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto w-100 justify-content-end">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#data">Data
+                            <a class="nav-link" href="#logo-dash">Data
                                 <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#chart-sensor-control">Control</a>
+                            <a class="nav-link" href="#data">Control</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
@@ -95,12 +95,20 @@
                     <div class="col-12 col-sm-12 col-md-8 col-lg-8">
                         <div class="jumbotron chart-sensor">
                             <h3>Chart</h3>
+                            <div class="line-chart-sensor">
+                                <img class="line-chart-sensor-style" src="img-sensor/linered.png" alt="temp">
+                                <p class="t-line">Temperature</p>
+                                <img class="line-chart-sensor-style" src="img-sensor/linehum.png" alt="hum">
+                                <p class="h-line">Humidity</p>
+                                <img class="line-chart-sensor-style" src="img-sensor/linedust.png" alt="gas">
+                                <p class="g-line">Gas</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                         <div class="jumbotron control-led">
                             <h3>Control</h3>
-                            <img src="img/light-bulb.png" alt="light-on" width="150" height="150">
+                            <img src="img/light-bulb.png" alt="light-on">
                             <input type="submit" id="on" value="ON">
                             <input type="submit" id="off" value="OFF">
                             <div class="slidecontainer">
